@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
     res.send({mgg:'hello '})
 })
 app.use('/my',noteRouter);
-
+// hii
 
 // "name":"deepak",
 // "email":"deepak@gmail.com",
