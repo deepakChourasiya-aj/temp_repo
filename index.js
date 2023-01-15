@@ -5,11 +5,13 @@ const { Usremodel } = require('./model/user.model');
 const app = express();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
-const { UserModel } = require('../../FullstackProject/Backend/model/user.mode');
 const { userAuthenticator } = require('./middleware/userAuthenticator');
 const { Bookmodel } = require('./model/book.mode');
 const { noteRouter } = require('./routes/userroutes');
 const { bookrouter } = require('./routes/notesroute');
+
+var cors = require('cors') 
+app.use(cors())
 
 app.use(express.json());
 require('dotenv').config();
